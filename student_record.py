@@ -82,6 +82,11 @@ def calculate_average():
      for student in students:
           if select_id == student["id"]:
                found = True
+
+               if not student['grades']:
+                    print("No Grade yet.")
+                    break
+               
                print(f"\n======STUDENT AVERAGE======")
                print(f"Name: {student['name']}")
                print(f"English: {student['grades']['english']}")
